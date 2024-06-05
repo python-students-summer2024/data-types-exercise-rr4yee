@@ -13,7 +13,8 @@ def calculate_profit():
     """
     total_number_of_sales = float(input("Please enter in the projected amount of total sales: "))
     profit = total_number_of_sales *0.23
-    print("Profit: ${profit}")
+    format = "${:,.2f}".format(profit)
+    print("Profit:", format)
 
 
 def calculate_quotient_and_remainder():
@@ -29,7 +30,7 @@ def calculate_quotient_and_remainder():
     num2 = int(input("Enter number #2: "))
     quotient = num1 // num2
     remainder = num1 % num2
-    print("{num2} goes into {num1} a total of {quotient} times with a remainder of {remainder}")
+    print(f"{num2} goes into {num1} a total of {quotient} times with a remainder of {remainder}")
 
 
 def calculate_miles_per_gallon():
@@ -46,7 +47,7 @@ def calculate_miles_per_gallon():
     miles_driven = float(input("Miles driven: "))
     gallons_of_gas_used = float(input("Gas used (gallons): "))
     MPG = miles_driven / gallons_of_gas_used
-    print("Miles per gallon: {mpg:.1}")
+    print(f"Miles per gallon: {MPG:.1f}")
 
 
 def align_text():
